@@ -3,6 +3,7 @@
 
 window.addEventListener("load", function() {
     let form = document.querySelector("form");
+    //let formSubmitBtn = document.getElementById("formSubmit");
     let faultyList = document.getElementById("faultyItems");
     let pilotStatu = document.getElementById("pilotStatus");
     let coPilotStatu = document.getElementById("copilotStatus");
@@ -23,10 +24,11 @@ window.addEventListener("load", function() {
             validFuelLevel === "" || validCargoMass === "" ) {
                 alert("All fields are required");
                 event.preventDefault();
-            };
+        };
         let validArr = [validPilot, validCoPilot, validFuelLevel, validCargoMass];
        
         formSubmission(faultyList, validArr, pilotStatu, coPilotStatu, fuelStatu, cargoStatu);
+  
     });
  
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()

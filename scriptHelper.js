@@ -54,6 +54,10 @@ function formSubmission(mydocument, list, pilot, copilot, fuelLevel, cargoLevel)
             header2.innerHTML = "Shuttle is ready for launch"; 
             header2.style.color = "green";
         }
+        
+        document.getElementById("formSubmit").addEventListener("submit", function(event){
+            event.preventDefault();
+          });
 }
 
 async function myFetch() {
