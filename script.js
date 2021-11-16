@@ -16,6 +16,7 @@ window.addEventListener("load", function() {
     let cargoMass = document.querySelector("input[name=cargoMass]");
       
     form.addEventListener("submit", function(event) {
+        event.preventDefault();
         let validPilot = validateInput(pilotName);
         let validCoPilot = validateInput(coPilotName);
         let validFuelLevel = validateInput(fuelAmt);
@@ -23,12 +24,12 @@ window.addEventListener("load", function() {
         if (validPilot === "" || validCoPilot === "" ||
             validFuelLevel === "" || validCargoMass === "" ) {
                 alert("All fields are required");
-                event.preventDefault();
+               // event.preventDefault();
         };
         let validArr = [validPilot, validCoPilot, validFuelLevel, validCargoMass];
        
         formSubmission(faultyList, validArr, pilotStatu, coPilotStatu, fuelStatu, cargoStatu);
-  
+        event.preventDefault();
     });
  
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
